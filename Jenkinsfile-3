@@ -6,7 +6,7 @@ pipeline {
         docker { image 'hello-world' }
       }
       steps {
-        sh 'hello-world --version'
+        sh 'hello-world'
       }
     }
     stage('Front-end') {

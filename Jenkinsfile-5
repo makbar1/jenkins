@@ -1,0 +1,23 @@
+pipeline {
+	agent {
+    		docker { image 'busybox:latest' }
+  		}
+    stages {
+        stage('Build') {
+            steps {
+		echo 'hahahaha....................'	
+            }
+        }
+        stage('Test') {
+            steps {
+	      sh 'uname'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+		sh "docker stop hello-world | true"
+            }
+        }
+    }
+}
